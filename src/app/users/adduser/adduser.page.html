@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+      <ion-item lines="full">
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="Nombre" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Segundo Nombre</ion-label>
+        <ion-input formControlName="SNombre" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input formControlName="Apellido" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Segundo Apellido</ion-label>
+        <ion-input formControlName="Sapellido" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-datetime #datetime size="cover" formControlName="FechaNac" presentation="date" [preferWheel]="true" [max]="defaultDate" locale="default">
+          <span slot="title">Selecciona la fecha de cumpleaños</span>
+        </ion-datetime>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-datetime #datetime size="cover" formControlName="FechaContrato" presentation="date" [preferWheel]="true" [max]="defaultDate" locale="default">
+          <span slot="title">Selecciona la fecha de Contrato</span>
+        </ion-datetime>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="Pass" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Rut</ion-label>
+        <ion-input formControlName="Rut" type="number" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="email" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Estado de usuario</ion-label>
+        <ion-input formControlName="idEstadoUser" type="number" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Tipo de usuario</ion-label>
+        <ion-input formControlName="idTipoUser" type="number" required></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block">Registrar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-content>
+</ion-content>

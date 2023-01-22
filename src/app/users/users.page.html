@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">Usuarios</ion-title>
+    <ion-button [routerLink]="['adduser']" slot="end">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let user of users2" [routerLink]="['/users', user.idUser]" class="ion-justify-content-center" >
+    <ion-card-header>
+      
+      <ion-card-title class="ion-text-center">{{user.Nombre}} {{user.SNombre}} {{user.Apellido}} {{user.SApellido}}</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">{{user.Rut}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content class="ion-text-center">
+      <p>Email: {{user.email}}</p>
+      <p>Tipo De Usuario: {{user.idTipoUser}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

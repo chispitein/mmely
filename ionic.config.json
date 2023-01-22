@@ -1,0 +1,7 @@
+{
+  "name": "MMEly",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
